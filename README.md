@@ -7,8 +7,21 @@ This repository contains a simple sign-up page built using Angular and Tailwind 
 - **Angular**: Front-end framework for building the sign-up page.
 - **Tailwind CSS**: Utility-first CSS framework for styling.
 
-## Installation
 
+## Run the Server
+To start the Angular development server, run:
+```sh
+ng serve
+```
+Then open your browser and go to `http://localhost:4200/`.
+
+To start the JSON Server, run:
+```sh
+json-server --watch db.json --port 3000
+```
+Then open your browser and go to `http://localhost:3000/` to check the API responses.
+
+## Installation
 1. Clone the repository:
    ```sh
    git clone https://github.com/MoussaAhmed1/Nano-assignment.git
