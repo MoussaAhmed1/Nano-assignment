@@ -1,0 +1,147 @@
+<section class="bg-primary-red bg-opacity-90 relative z-1">
+  <div class="overlay w-full h-full opacity-80 absolute z-4 top-0 left-0 bg-cover" style="background-image: url('assets/images/bg-intro-desktop.png');">
+  </div>
+  <div class="min-h-screen flex items-center justify-center p-4 md:p-6 z-7 relative">
+    <div class="w-full max-w-6xl grid md:grid-cols-2 gap-8 items-center">
+      <div class="text-white space-y-6 text-center md:text-left">
+        <h1 class="text-4xl md:text-5xl font-bold leading-tight">
+          Learn to code by watching others
+        </h1>
+        <p class="text-lg opacity-90">
+          See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how
+          developers think is invaluable.
+        </p>
+      </div>
+  
+      <div class="space-y-4">
+        <div class="bg-accent text-white p-4 rounded-lg text-center shadow-lg">
+          <p><span class="font-bold">Try it free 7 days</span> then $20/mo. thereafter</p>
+        </div>
+  
+        <!-- Form card -->
+        <div class="bg-white rounded-lg p-6 shadow-lg space-y-4">
+          <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="space-y-4">
+            <div class="relative">
+              <input
+                type="text"
+                placeholder="First Name"
+                formControlName="firstName"
+                [class]="'w-full p-3 border rounded-lg placeholder:font-bold placeholder:text-gray-300' + 
+                  (isErrorVisible('firstName') ? 'border-primary-red' : 'border-gray-200')"
+              />
+              <div *ngIf="isErrorVisible('firstName')"
+                   class="absolute right-3 top-3 text-primary-red border-primary-red">
+                <img class="error-icon" src="assets/images/icon-error.svg" alt="Error icon" width="24" height="24"/>
+              </div>
+              <p *ngIf="isErrorVisible('firstName')"
+                 class="text-primary-red border-primary-red text-xs italic text-right mt-1">
+                  First Name cannot be empty
+              </p>
+            </div>
+
+            <div class="relative">
+              <input
+                type="text"
+                placeholder="Last Name"
+                formControlName="lastName"
+                [class]="'w-full p-3 border rounded-lg placeholder:font-bold placeholder:text-gray-300' + 
+                  (isErrorVisible('lastName') ? 'border-primary-red' : 'border-gray-200')"
+              />
+              <div *ngIf="isErrorVisible('lastName')"
+                   class="absolute right-3 top-3 text-primary-red border-primary-red">
+                <img class="error-icon" src="assets/images/icon-error.svg" alt="Error icon" width="24" height="24"/>
+              </div>
+              <p *ngIf="isErrorVisible('lastName')"
+                 class="text-primary-red border-primary-red text-xs italic text-right mt-1">
+                 Last Name cannot be empty
+              </p>
+            </div>
+
+            <div class="relative">
+              <input
+                type="email"
+                placeholder="Email"
+                formControlName="email"
+                autocomplete="new-password"
+                [class]="'w-full p-3 border rounded-lg placeholder:font-bold placeholder:text-gray-300' + 
+                  (isErrorVisible('email') ? 'border-primary-red' : 'border-gray-200')"
+              />
+              <div *ngIf="isErrorVisible('email')"
+                   class="absolute right-3 top-3 text-primary-red border-primary-red">
+                <img class="error-icon" src="assets/images/icon-error.svg" alt="Error icon" width="24" height="24"/>
+              </div>
+              <p *ngIf="isErrorVisible('email') && signupForm.get('email')?.errors?.['required']"
+              class="text-primary-red border-primary-red text-xs italic text-right mt-1">
+                Email cannot be empty
+             </p>
+              <p *ngIf="isErrorVisible('email') && signupForm.get('email')?.errors?.['pattern']"
+                 class="text-primary-red border-primary-red text-xs italic text-right mt-1">
+                 Looks like this is not an email
+              </p>
+            </div>
+            
+            <div class="relative">
+              <input
+                [type]="showPassword ? 'text' : 'password'"
+                placeholder="Password"
+                formControlName="password"
+                [class]="'w-full p-3 border rounded-lg placeholder:font-bold placeholder:text-gray-300' + 
+                  (isErrorVisible('password') ? 'border-primary-red' : 'border-gray-200')"
+              />
+              <div *ngIf="isErrorVisible('password')"
+                   class="absolute right-10 top-3 text-primary-red border-primary-red">
+                <img class="error-icon" src="assets/images/icon-error.svg" alt="Error icon" width="24" height="24"/>
+              </div>
+              <div class="absolute right-3 top-3 text-primary-red border-primary-red">
+                <img class="error-icon" (click)="triggerPasswordVisibility()" [src]="showPassword?'assets/images/eye-on.svg':'assets/images/eye-off.svg'" alt="Error icon" width="24" height="24"/>
+              </div>
+              <p *ngIf="isErrorVisible('password')"
+                 class="text-primary-red border-primary-red text-xs italic text-right mt-1">
+                 Password should be at least 6 characters
+              </p>
+            </div>
+
+            <div class="relative">
+              <input
+                [type]="showPassword ? 'text' : 'password'"
+                placeholder="Confirm Password"
+                formControlName="confirmPassword"
+                [class]="'w-full p-3 border rounded-lg placeholder:font-bold placeholder:text-gray-300' + 
+                  (isErrorVisible('confirmPassword') ? 'border-primary-red' : 'border-gray-200')"
+              />
+              <div *ngIf="isErrorVisible('confirmPassword')"
+                   class="absolute right-10 top-3 text-primary-red border-primary-red">
+                <img class="error-icon" src="assets/images/icon-error.svg" alt="Error icon" width="24" height="24"/>
+              </div>
+              <div class="absolute right-3 top-3 text-primary-red border-primary-red">
+                <img class="error-icon" (click)="triggerPasswordVisibility()" [src]="showPassword?'assets/images/eye-on.svg':'assets/images/eye-off.svg'" alt="Error icon" width="24" height="24"/>
+              </div>
+              <p *ngIf="isErrorVisible('confirmPassword')"
+                 class="text-primary-red border-primary-red text-xs italic text-right mt-1">
+                 password and confirm password should match
+              </p>
+            </div>
+  
+  
+            <button
+              type="submit"
+              [disabled]="!signupForm.valid"
+              class="w-full bg-primary-green disabled:bg-[#77E2B3] hover:bg-[#2bdd69]  text-white font-bold py-4 rounded-lg uppercase tracking-wide transition-colors"
+            >
+              Claim your free trial
+            </button>
+          </form>
+  
+          <p class="text-neutral-grayishblue text-center text-xs px-4 font-semibold">
+            By clicking the button, you are agreeing to our
+            <a href="#" class="text-primary-red font-bold">
+              Terms and Services
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+  
+  
