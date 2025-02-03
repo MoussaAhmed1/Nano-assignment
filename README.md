@@ -6,8 +6,6 @@ This repository contains a simple sign-up page built using Angular and Tailwind 
 ## Technologies Used
 - **Angular**: Front-end framework for building the sign-up page.
 - **Tailwind CSS**: Utility-first CSS framework for styling.
-- **Reactive Forms**: Used for handling form validation and state management.
-- **ngx-toastr**: Used for displaying toast notifications.
 
 ## Installation
 
