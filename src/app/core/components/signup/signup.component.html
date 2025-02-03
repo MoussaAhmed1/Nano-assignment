@@ -18,7 +18,7 @@
           <p><span class="font-bold">Try it free 7 days</span> then $20/mo. thereafter</p>
         </div>
   
-        <!-- Form card -->
+        <!-- sign up Form -->
         <div class="bg-white rounded-lg p-6 shadow-lg space-y-4">
           <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="space-y-4">
             <div class="relative">
@@ -30,11 +30,11 @@
                   (isErrorVisible('firstName') ? 'border-primary-red' : 'border-gray-200')"
               />
               <div *ngIf="isErrorVisible('firstName')"
-                   class="absolute right-3 top-3 text-primary-red border-primary-red">
+                   class="absolute right-3 top-3 text-primary-red">
                 <img class="error-icon" src="assets/images/icon-error.svg" alt="Error icon" width="24" height="24"/>
               </div>
               <p *ngIf="isErrorVisible('firstName')"
-                 class="text-primary-red border-primary-red text-xs italic text-right mt-1">
+                 class="text-primary-red text-xs italic text-right mt-1">
                   First Name cannot be empty
               </p>
             </div>
@@ -48,11 +48,11 @@
                   (isErrorVisible('lastName') ? 'border-primary-red' : 'border-gray-200')"
               />
               <div *ngIf="isErrorVisible('lastName')"
-                   class="absolute right-3 top-3 text-primary-red border-primary-red">
+                   class="absolute right-3 top-3 text-primary-red">
                 <img class="error-icon" src="assets/images/icon-error.svg" alt="Error icon" width="24" height="24"/>
               </div>
               <p *ngIf="isErrorVisible('lastName')"
-                 class="text-primary-red border-primary-red text-xs italic text-right mt-1">
+                 class="text-primary-red text-xs italic text-right mt-1">
                  Last Name cannot be empty
               </p>
             </div>
@@ -63,19 +63,19 @@
                 placeholder="Email"
                 formControlName="email"
                 autocomplete="new-password"
-                [class]="'w-full p-3 border rounded-lg placeholder:font-bold placeholder:text-gray-300' + 
+                [class]="'w-full p-3 border-2 rounded-lg placeholder:font-bold placeholder:text-gray-300' + 
                   (isErrorVisible('email') ? 'border-primary-red' : 'border-gray-200')"
               />
               <div *ngIf="isErrorVisible('email')"
-                   class="absolute right-3 top-3 text-primary-red border-primary-red">
+                   class="absolute right-3 top-3 text-primary-red">
                 <img class="error-icon" src="assets/images/icon-error.svg" alt="Error icon" width="24" height="24"/>
               </div>
               <p *ngIf="isErrorVisible('email') && signupForm.get('email')?.errors?.['required']"
-              class="text-primary-red border-primary-red text-xs italic text-right mt-1">
+              class="text-primary-red text-xs italic text-right mt-1">
                 Email cannot be empty
              </p>
               <p *ngIf="isErrorVisible('email') && signupForm.get('email')?.errors?.['pattern']"
-                 class="text-primary-red border-primary-red text-xs italic text-right mt-1">
+                 class="text-primary-red text-xs italic text-right mt-1">
                  Looks like this is not an email
               </p>
             </div>
@@ -89,14 +89,14 @@
                   (isErrorVisible('password') ? 'border-primary-red' : 'border-gray-200')"
               />
               <div *ngIf="isErrorVisible('password')"
-                   class="absolute right-10 top-3 text-primary-red border-primary-red">
+                   class="absolute right-10 top-3 text-primary-red">
                 <img class="error-icon" src="assets/images/icon-error.svg" alt="Error icon" width="24" height="24"/>
               </div>
-              <div class="absolute right-3 top-3 text-primary-red border-primary-red">
+              <div class="absolute right-3 top-3 text-primary-red">
                 <img class="error-icon" (click)="triggerPasswordVisibility()" [src]="showPassword?'assets/images/eye-on.svg':'assets/images/eye-off.svg'" alt="Error icon" width="24" height="24"/>
               </div>
               <p *ngIf="isErrorVisible('password')"
-                 class="text-primary-red border-primary-red text-xs italic text-right mt-1">
+                 class="text-primary-red text-xs italic text-right mt-1">
                  Password should be at least 6 characters
               </p>
             </div>
@@ -110,14 +110,14 @@
                   (isErrorVisible('confirmPassword') ? 'border-primary-red' : 'border-gray-200')"
               />
               <div *ngIf="isErrorVisible('confirmPassword')"
-                   class="absolute right-10 top-3 text-primary-red border-primary-red">
+                   class="absolute right-10 top-3 text-primary-red">
                 <img class="error-icon" src="assets/images/icon-error.svg" alt="Error icon" width="24" height="24"/>
               </div>
-              <div class="absolute right-3 top-3 text-primary-red border-primary-red">
+              <div class="absolute right-3 top-3 text-primary-red">
                 <img class="error-icon" (click)="triggerPasswordVisibility()" [src]="showPassword?'assets/images/eye-on.svg':'assets/images/eye-off.svg'" alt="Error icon" width="24" height="24"/>
               </div>
               <p *ngIf="isErrorVisible('confirmPassword')"
-                 class="text-primary-red border-primary-red text-xs italic text-right mt-1">
+                 class="text-primary-red text-xs italic text-right mt-1">
                  password and confirm password should match
               </p>
             </div>

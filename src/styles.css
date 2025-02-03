@@ -1,1 +1,19 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+@theme{
+  /* text size: 16px; */
+  --text-bodycopy:16px;
+    --font-sans: "Poppins", "sans-serif";
+    /* layout */
+    --breakpoint-xl: 1440px;
+    --breakpoint-xs: 375px;
+    /* colors */
+    --color-primary-red: hsl(0, 100%, 74%);
+    --color-primary-green:  hsl(154, 59%, 51%);
+    --color-accent: hsl(248, 32%, 49%);
+    --color-secondary:  hsl(154, 59%, 51%);
+    --color-neutral-darkblue:  hsl(249, 10%, 26%);
+    --color-neutral-grayishblue:  hsl(246, 25%, 77%);
+  }
