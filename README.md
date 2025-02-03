@@ -17,7 +17,7 @@ Then open your browser and go to `http://localhost:4200/`.
 
 To start the JSON Server, run:
 ```sh
-json-server --watch db.json --port 3000
+json-server --watch db1.json --port 3000
 ```
 Then open your browser and go to `http://localhost:3000/` to check the API responses.
 
