@@ -1,1 +1,18 @@
-{}
+{
+  "users": [
+    {
+      "id": "c857",
+      "firstName": "Fugiat officiis del",
+      "lastName": "Expedita ipsa optio",
+      "email": "qozeli@mailinator.com",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "4789",
+      "firstName": "Quis iure voluptatem",
+      "lastName": "Aperiam incididunt u",
+      "email": "hulajimuc@mailinator.com",
+      "password": "Pa$$w0rd!"
+    }
+  ]
+}
