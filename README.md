@@ -1,59 +1,72 @@
-# NanoAssignment
+# Sign Up Page Assignment
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.5.
+## Overview
+This repository contains a simple sign-up page built using Angular and Tailwind CSS. The page includes a reactive form with validation and integrates with an authentication service.
 
-## Development server
+## Technologies Used
+- **Angular**: Front-end framework for building the sign-up page.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
 
-To start a local development server, run:
 
-```bash
+
+## Installation
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/MoussaAhmed1/Nano-assignment.git
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd Nano-assignment
+   ```
+3. Install dependencies:
+   ```sh
+   npm install
+   ```
+4. Run the development server:
+   ```sh
+   ng serve
+   ```
+5. Open your browser and go to `http://localhost:4200/`
+
+## Run the Server
+To start the Angular development server, run:
+```sh
 ng serve
 ```
+Then open your browser and go to `http://localhost:4200/`.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+To start the JSON Server, run:
+```sh
+json-server --watch db1.json --port 3000
+```
+Then open your browser and go to `http://localhost:3000/` to check the API responses.
 
-## Code scaffolding
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+## Folder Structure
+```
+src/
+├── app/
+│   ├── components/
+│   │   ├── signup/
+│   │   │   ├── signup.component.ts
+│   │   │   ├── signup.component.html
+│   │   │   ├── signup.component.css
+│   ├── models/
+│   │   ├── user.ts
+│   ├── services/
+│   │   ├── auth.service.ts
+│   ├── app.module.ts
+│   ├── app.component.ts
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Sign-Up Component
+The `SignupComponent` handles the user registration process.
+### Features
+- Form validation for required fields, email format, and password matching.
+- Show/hide password functionality.
+- Integration with an authentication service for user registration.
+- Toast notifications for success and error messages.
 
-```bash
-ng generate --help
-```
+## Contribution
+Feel free to fork the repository and submit pull requests for improvements.
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
