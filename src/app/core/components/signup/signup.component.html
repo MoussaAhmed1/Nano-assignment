@@ -26,7 +26,7 @@
                 type="text"
                 placeholder="First Name"
                 formControlName="firstName"
-                [class]="'w-full p-3 border-2 border-gray-300 hover:border-accent focus:border-accent focus:outline-accent rounded-lg placeholder:font-bold placeholder:text-gray-300'"
+                class="w-full p-3 border-2 border-gray-300 hover:border-accent focus:border-accent focus:outline-accent rounded-lg placeholder:font-bold placeholder:text-gray-300"
                 [ngClass]="{'border-primary-red': isErrorVisible('firstName')}"
               />
               <div *ngIf="isErrorVisible('firstName')"
@@ -44,7 +44,7 @@
                 type="text"
                 placeholder="Last Name"
                 formControlName="lastName"
-                [class]="'w-full p-3 border-2 border-gray-300 hover:border-accent focus:border-accent focus:outline-accent rounded-lg placeholder:font-bold placeholder:text-gray-300'"
+                class="w-full p-3 border-2 border-gray-300 hover:border-accent focus:border-accent focus:outline-accent rounded-lg placeholder:font-bold placeholder:text-gray-300"
                 [ngClass]="{'border-primary-red': isErrorVisible('lastName')}"
               />
               <div *ngIf="isErrorVisible('lastName')"
@@ -63,7 +63,7 @@
                 placeholder="Email"
                 formControlName="email"
                 autocomplete="new-password"
-                [class]="'w-full p-3 border-2 border-gray-300 hover:border-accent focus:border-accent focus:outline-accent rounded-lg placeholder:font-bold placeholder:text-gray-300'"
+                class="w-full p-3 border-2 border-gray-300 hover:border-accent focus:border-accent focus:outline-accent rounded-lg placeholder:font-bold placeholder:text-gray-300"
                 [ngClass]="{'border-primary-red': isErrorVisible('email')}"
               />
               <div *ngIf="isErrorVisible('email')"
@@ -85,7 +85,7 @@
                 [type]="showPassword ? 'text' : 'password'"
                 placeholder="Password"
                 formControlName="password"
-                [class]="'w-full p-3 border-2 border-gray-300 hover:border-accent focus:border-accent focus:outline-accent rounded-lg placeholder:font-bold placeholder:text-gray-300'"
+                class="w-full p-3 border-2 border-gray-300 hover:border-accent focus:border-accent focus:outline-accent rounded-lg placeholder:font-bold placeholder:text-gray-300"
                 [ngClass]="{'border-primary-red': isErrorVisible('password')}"
               />
               <div *ngIf="isErrorVisible('password')"
@@ -106,7 +106,7 @@
                 [type]="showPassword ? 'text' : 'password'"
                 placeholder="Confirm Password"
                 formControlName="confirmPassword"
-                [class]="'w-full p-3 border-2 border-gray-300 hover:border-accent focus:border-accent focus:outline-accent rounded-lg placeholder:font-bold placeholder:text-gray-300'"
+                class="w-full p-3 border-2 border-gray-300 hover:border-accent focus:border-accent focus:outline-accent rounded-lg placeholder:font-bold placeholder:text-gray-300"
                 [ngClass]="{'border-primary-red': isErrorVisible('confirmPassword')}"
               />
               <div *ngIf="isErrorVisible('confirmPassword')"
