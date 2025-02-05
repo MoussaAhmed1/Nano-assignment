@@ -3,8 +3,8 @@
 
 
 @theme{
-  /* text size: 16px; */
-  --text-bodycopy:16px;
+    /* text size: 16px; */
+    --text-bodycopy:16px;
     --font-sans: "Poppins", "sans-serif";
     /* layout */
     --breakpoint-xl: 1440px;

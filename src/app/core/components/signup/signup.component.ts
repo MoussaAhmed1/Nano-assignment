@@ -1,4 +1,4 @@
-import { NgIf, NgStyle } from '@angular/common';
+import { NgClass, NgIf, NgStyle } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators,ReactiveFormsModule } from "@angular/forms"
 import { ToastrService } from 'ngx-toastr';
@@ -7,7 +7,7 @@ import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-signup',
-  imports: [ReactiveFormsModule,NgIf],
+  imports: [ReactiveFormsModule,NgIf,NgClass],
   templateUrl: './signup.component.html',
   styleUrl: './signup.component.css'
 })
